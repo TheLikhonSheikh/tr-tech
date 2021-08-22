@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from googletrans import Translator
 
-TR-TECH-GUIDE = Client(
+SLBotsOfficial = Client(
     "Translator Bot",
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
