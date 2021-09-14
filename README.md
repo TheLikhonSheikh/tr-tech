@@ -59,6 +59,7 @@ python3 main.py
 
 ## Credits
 
-- [Tharuk Renuja](https://github.com/TR-TECH-GUIDE)
+- [Fayas](https://github.com/FayasNoushad)
+- [Me](https://github.com/TR-TECH-GUIDE)
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Google Translator](https://translate.google.com)
