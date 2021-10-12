@@ -11,24 +11,18 @@ SLBotsOfficial = Client(
 )
 
 START_TEXT = """
-Hello {}, I am a google translator telegram bot.
+Hello {}, I am Nexus Translator Telegram Bot.
 
-Made by @SLBotsOfficial
 """
 HELP_TEXT = """
 - Just send a text with language code
 - And select a language for translating
 
-Made by @SLBotsOfficial
 """
 ABOUT_TEXT = """
 - **Bot :** `Translator Bot V2`
-- **Creator :** [Tharuk](https://telegram.me/TharukRenuja)
-- **Channel :** [SLBotsOfficial](https://telegram.me/SLBotsOfficial)
-- **Source :** [Click here](https://github.com/SLBotsOfficial/Translator-Bot)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- **Creator :** [Likhon | Crypto ⚡](https://telegram.me/GodFatherMob)
+- **Channel :** [Likhon Sheikh 🚀🌕](https://t.me/likhonsheikhyt)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -46,8 +40,8 @@ HELP_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Channel', url='https://telegram.me/SLBotsOfficial'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TharukRenuja')
+        InlineKeyboardButton('Likhon Sheikh 🚀🌕', url='https://t.me/likhonsheikhyt'),
+        InlineKeyboardButton('Creator', url='https://t.me/likhonsheikhyt')
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
@@ -61,7 +55,7 @@ CLOSE_BUTTON = InlineKeyboardMarkup(
     )
 TRANSLATE_BUTTON = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/SLBotsOfficial')
+        InlineKeyboardButton('⚙ Join Nexus Group ⚙', url='https://t.me/NexusCryptoSVC')
         ]]
     )
 LANGUAGE_BUTTONS = InlineKeyboardMarkup(
@@ -123,7 +117,7 @@ async def cb_data(bot, update):
             translate_text = f"**Translated to {language}**"
             translate_text += f"\n\n{translate.text}"
             if len(translate_text) < 4096:
-                translate_text += "\n\nMade by @SLBotsOfficial"
+                translate_text += "\n\nJoin @NexusCryptoNews"
                 await message.edit_text(
                     text=translate_text,
                     disable_web_page_preview=True,
@@ -134,13 +128,13 @@ async def cb_data(bot, update):
                     translate_file.name = language + ".txt"
                     await update.reply_document(
                         document=translate_file,
-                        caption="Made by @SLBotsOfficial",
+                        caption="Join @NexusCryptoNews",
                         reply_markup=TRANSLATE_BUTTON
                     )
                 await message.delete()
         except Exception as error:
             print(error)
-            await message.edit_text("Something wrong. Contact @TharukRenuja.")
+            await message.edit_text("Something wrong. Contact @likhonsheikhyt.")
 
 @SLBotsOfficial.on_message(filters.command(["start"]))
 async def start(bot, update):
